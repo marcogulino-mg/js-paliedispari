@@ -39,7 +39,7 @@ Dichiariamo chi ha vinto.
 */
 
 //VARs
-let userChoice = prompt("Scegli pari o dispari");
+let userChoice = prompt("Scegli pari o dispari").toLowerCase();
 let number = parseInt(prompt("Inserisci un numero da 1 a 5"));
 let cpuNum = 0;
 let result;
@@ -78,18 +78,9 @@ console.log("La somma è uguale a : " + sum);
 result = checkNum(userChoice, sum);
 
 if (
-  (result && userChoice === "pari") ||
-  (result && userChoice === "Pari") ||
-  (!result && userChoice === "dispari") ||
-  (result && userChoice === "Dispari")
-) {
+  (result && userChoice === "pari") || (!result && userChoice === "dispari")) {
   console.log("Il giocatore ha vinto");
-} else if (
-  userChoice != "pari" &&
-  userChoice != "Pari" &&
-  userChoice != "dispari" &&
-  userChoice != "Dispari"
-) {
+} else if (userChoice != "pari" && userChoice != "dispari") {
   console.log("Errore nella scelta tra pari o dispari");
 } else if (number > 5 || number < 1) {
   console.log("Errore nell'inserimento del numero");
