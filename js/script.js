@@ -53,15 +53,13 @@ function numberGenerator() {
 
 //Funzione che controlla se il numero è pari o dispari
 function checkNum(choice, num) {
-  let isEven = false;
   if (num % 2 === 0) {
     console.log("Il numero è pari");
-    isEven = true;
-    return isEven;
+    return true;
   }
 
   console.log("Il numero è dispari");
-  return isEven;
+  return false;
 }
 
 console.log("Il numero che hai scelto è: " + number);
