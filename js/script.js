@@ -19,9 +19,9 @@ function palindromeWord(inWord) {
 
   //Controllo se la parola è palindroma
   if (inWord === tempWord) {
-    return console.log("La parola è palindroma");
+    console.log("La parola è palindroma");
   } else {
-    return console.log("La parola non è palindroma");
+    console.log("La parola non è palindroma");
   }
 }
 
@@ -76,7 +76,9 @@ console.log("La somma è uguale a : " + sum);
 result = checkNum(userChoice, sum);
 
 if (
-  (result && userChoice === "pari") || (!result && userChoice === "dispari")) {
+  (result && userChoice === "pari") ||
+  (!result && userChoice === "dispari")
+) {
   console.log("Il giocatore ha vinto");
 } else if (userChoice != "pari" && userChoice != "dispari") {
   console.log("Errore nella scelta tra pari o dispari");
